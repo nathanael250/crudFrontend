@@ -12,7 +12,7 @@ const Add = () => {
 
         e.preventDefault()
 
-        axios.post("https://crudfrontend-r880.onrender.com/employees", { email, role })
+        axios.post("/employees", { email, role })
             .then(result=>{toast("Employee Recorded Successfully!")
             setEmail("")
             setRole("")

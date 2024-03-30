@@ -10,7 +10,7 @@ const Edit = () => {
     const [role, setRole] = useState();
     const Navigate = useNavigate();
     useEffect(() => {
-        axios.get("https://crudfrontend-r880.onrender.com/userforupdate/"+id)
+        axios.get("/userforupdate/"+id)
             .then(result => {
                 console.log(result.data)
                 setEmail(result.data.email)
@@ -24,7 +24,7 @@ const Edit = () => {
 
     const update = (e) => {
         e.preventDefault();
-       axios.put("https://crudfrontend-r880.onrender.com/"+id,{email,role})
+       axios.put("/"+id,{email,role})
        .then(result=>{
         
         toast("Employee updated successfully")

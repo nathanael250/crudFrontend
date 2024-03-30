@@ -24,7 +24,7 @@ const Edit = () => {
 
     const update = (e) => {
         e.preventDefault();
-       axios.put("https://crudbackend-hvhg.onrender.com/"+id,{email,role})
+       axios.put("https://crudfrontend-r880.onrender.com/"+id,{email,role})
        .then(result=>{
         
         toast("Employee updated successfully")

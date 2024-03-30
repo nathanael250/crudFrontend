@@ -7,14 +7,14 @@ const Employee = () => {
   const[users, setUsers] = useState([]);
   const Navigate = useNavigate()
   useEffect(()=>{
-    axios.get("https://crudbackend-hvhg.onrender.com/fetch")
+    axios.get("https://crudfrontend-r880.onrender.com/fetch")
     .then(result=>setUsers(result.data))
     .catch(err=>console.log(err))
 
   },[])
 
   const deletehandle =(id)=>{
-    axios.delete("https://crudbackend-hvhg.onrender.com//deleteuser/"+id)
+    axios.delete("https://crudfrontend-r880.onrender.com/deleteuser/"+id)
     .then(result=>{
         toast("user deleted successfully")
         setTimeout(()=>{

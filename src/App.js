@@ -1,28 +1,24 @@
-
-import './App.css';
+import React from 'react'
+import Add from './components/Add'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import User from './components/User';
-import Create from './components/Create';
-import Update from './components/Update'
-import Table from './components/Table';
-function App() {
+import Employee from './components/Employee';
+import Edit from './components/Edit';
 
 
+const App = () => {
   return (
-    <div>
-     <div className="flex items-center bg-indigo-800 justify-center w-full h-screen">
+    <div className='h-screen w-full bg-indigo-600 flex flex-col justify-center items-center'>
+     
      <Router>
+      
         <Routes>
-          <Route path='/' element={<User/>}/>
-          <Route path='/Create' element={<Create/>}/>
-          <Route path='/Update/:id' element={<Update/>}/>
-          <Route path='/Table' element={<Table/>}/>
-          
+          <Route path="/" element={<Employee/>} />
+          <Route path="/Add" element={<Add />} />
+          <Route path="/Edit/:id" element={<Edit/>} />
         </Routes>
       </Router>
-     </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

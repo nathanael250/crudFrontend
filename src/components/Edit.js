@@ -10,7 +10,7 @@ const Edit = () => {
     const [role, setRole] = useState();
     const Navigate = useNavigate();
     useEffect(() => {
-        axios.get("https://crudbackend-hvhg.onrender.com/userforupdate/"+id)
+        axios.get("https://crudfrontend-r880.onrender.com/userforupdate/"+id)
             .then(result => {
                 console.log(result.data)
                 setEmail(result.data.email)

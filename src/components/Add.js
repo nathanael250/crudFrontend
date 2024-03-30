@@ -12,7 +12,7 @@ const Add = () => {
 
         e.preventDefault()
 
-        axios.post("/employees", { email, role })
+        axios.post("http://localhost:5000/employees", { email, role })
             .then(result=>{toast("Employee Recorded Successfully!")
             setEmail("")
             setRole("")

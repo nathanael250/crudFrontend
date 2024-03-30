@@ -7,14 +7,14 @@ const Employee = () => {
   const[users, setUsers] = useState([]);
   const Navigate = useNavigate()
   useEffect(()=>{
-    axios.get("/fetch")
+    axios.get("http://localhost:5000/fetch")
     .then(result=>setUsers(result.data))
     .catch(err=>console.log(err))
 
   },[])
 
   const deletehandle =(id)=>{
-    axios.delete("/deleteuser/"+id)
+    axios.delete("http://localhost:5000/deleteuser/"+id)
     .then(result=>{
         toast("user deleted successfully")
         setTimeout(()=>{

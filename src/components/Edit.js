@@ -10,7 +10,7 @@ const Edit = () => {
     const [role, setRole] = useState();
     const Navigate = useNavigate();
     useEffect(() => {
-        axios.get("/userforupdate/"+id)
+        axios.get("http://localhost:5000/userforupdate/"+id)
             .then(result => {
                 console.log(result.data)
                 setEmail(result.data.email)
@@ -24,7 +24,7 @@ const Edit = () => {
 
     const update = (e) => {
         e.preventDefault();
-       axios.put("/"+id,{email,role})
+       axios.put("http://localhost:5000/"+id,{email,role})
        .then(result=>{
         
         toast("Employee updated successfully")
